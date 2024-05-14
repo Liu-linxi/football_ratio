@@ -5,7 +5,7 @@
 				<view class="d-flex a-center">
 					{{item.lname}}
 				</view>
-				<view class="main-color pr-4">
+				<view class="main-color pr-4 overflow-hidden">
 					{{item.lirun}}%
 				</view>
 			</view>
@@ -39,7 +39,7 @@
 						{{item.h||"未知"}}
 					</view>
 				</view>
-				<view class="">
+				<view class="overflow-hidden">
 					{{item.lirun}}%
 				</view>
 			</view>
