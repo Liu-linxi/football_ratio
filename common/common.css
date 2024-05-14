@@ -1,0 +1,65 @@
+/* #ifndef APP-NVUE */
+/* 设置全局样式 */
+/* (1) 页面高度100%,默认字体28upx,默认行高1.8,背景颜色 */
+/* @font-face {
+	font-family: 'PingFangSC-Medium';
+	src: url('~@/common/style/PINGFANGMEDIUM.TTF');
+	font-style: normal;
+	font-weight: normal;
+} */
+page {
+	height: 100%;
+	font-size: 28upx;
+	line-height: 1.8;
+	background: #ffffff;
+	box-sizing: border-box;
+	/* font-family: 'PingFangSC-Medium'; */
+}
+
+/* (2) 图片默认100%宽度 */
+image {
+	width: 100%;
+}
+
+.line-image {
+	width: 28upx;
+	height: 28upx;
+	line-height: 1.8;
+	margin-right: 10upx;
+	display: inline-block;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+/* #endif */
+/* 主色调 */
+.main-color{
+	color: #D81828;
+	/* color: #ED1B2E; */
+}
+.main-bg-color{
+	background-color: #D81828;
+}
+.main-green-color{
+	background-color: #01884e;
+}
+.main-pink-color{
+	background-color: #FFF7F7;
+}
+.green-color{
+	color: #009A63;
+}
+.gray-color{
+	color: #8A8A8A;
+}
+.font34{
+	font-size: 34rpx;
+}
+.font32{
+	font-size: 32rpx;
+}
+.font48{
+	font-size: 48rpx;
+}

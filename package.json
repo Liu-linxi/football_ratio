@@ -1,0 +1,17 @@
+{
+    "id": "TXm-vipCard",
+    "name": "会员卡",
+    "displayName": "会员卡",
+    "version": "1.0",
+    "description": "简单易用的会员卡组件",
+    "keywords": [
+        "会员卡",
+        "组件"
+    ],
+    "dcloudext": {
+        "category": [
+            "前端组件",
+            "通用组件"
+        ]
+    }
+}
