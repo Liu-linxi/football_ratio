@@ -9,7 +9,7 @@
 			</view>
 		</view>
 
-		<view class="item" v-for="(item,index) in initList" :key="item.id">
+		<view class="item" v-for="(item,index) in initList" :key="item.symbol">
 			<view class="d-flex a-center j-sb">
 				<view class="d-flex a-center">
 					{{item.lname}}
