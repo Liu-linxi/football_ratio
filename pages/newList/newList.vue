@@ -4,9 +4,6 @@
 			<view class="gray-color flex-1" :class="{active:index===oderby}" v-for="(li,index) in oderbyArray" :key="li" @click="changeData(index)">
 				{{li}}
 			</view>
-			<view @click="tonewList" class=" main-color flex-1" style="text-decoration: underline;">
-				查看更多
-			</view>
 		</view>
 
 		<view class="item" v-for="(item,index) in initList" :key="item.id">

@@ -21,25 +21,38 @@
 			}
 		},
 		{
-		    "path": "pages/login/login",
-		    "style": {
-					"navigationBarTitleText": "登录",
-					"enablePullDownRefresh": false
-				}
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"enablePullDownRefresh": false
+			}
 		}, {
-		    "path": "pages/login/forget",
-		    "style": {
-					"navigationBarTitleText": "重置密码",
-					"enablePullDownRefresh": false
-				}
+			"path": "pages/login/forget",
+			"style": {
+				"navigationBarTitleText": "重置密码",
+				"enablePullDownRefresh": false
+			}
 		}, {
-		    "path": "pages/login/register",
-		    "style": {
-					"navigationBarTitleText": "注册",
-					"enablePullDownRefresh": false
-					
+			"path": "pages/login/register",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"enablePullDownRefresh": false
+
+			}
+		},
+		{
+			"path": "pages/newList/newList",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"h5": {
+					"pullToRefresh": {
+						"color": "#D81828"
+					}
 				}
-		} 
+			}
+		}
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
