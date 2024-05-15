@@ -262,7 +262,7 @@
 							ws.send({
 								uid: this.userInfo.id,
 								type: 'login',
-								datatype: 1
+								datatype: 2
 							})
 						}, 2000)
 					})
@@ -275,7 +275,7 @@
 			ws.send({
 				uid: this.userInfo.id,
 				type: 'logout',
-				datatype: 1
+				datatype: 2
 			})
 		},
 		onShow() {
