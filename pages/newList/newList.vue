@@ -1,7 +1,7 @@
 <template>
 	<view class="home">
 		<view class="d-flex a-center top text-center">
-			<view class="gray-color flex-1" :class="{active:index===oderby}" v-for="(li,index) in oderbyArray" :key="li" @click="changeData(index)">
+			<view class="gray-color flex-1" :class="{active:index===orderby}" v-for="(li,index) in orderbyArray" :key="li" @click="changeData(index)">
 				{{li}}
 			</view>
 		</view>
@@ -152,14 +152,14 @@
 	export default {
 		data() {
 			return {
-				oderbyArray: ["时间", "利率"],
+				orderbyArray: ["时间", "利率"],
 				parseTime,
 				userInfo: {},
 				initList: [],
 				page: 1,
 				total: 0,
 				clickObj: {},
-				oderby: 0, //1时间排序 2=按利材序
+				orderby: 0, //1时间排序 2=按利材序
 			}
 		},
 		async onPullDownRefresh() {
@@ -205,13 +205,13 @@
 		methods: {
 
 			async initData() {
-				const { data } = await match({ page: this.page, oderby: this.oderby == 0 ? 1 : 2 }, { token: this.userInfo.token });
+				const { data } = await match({ page: this.page, orderby: this.orderby == 0 ? 1 : 2 }, { token: this.userInfo.token });
 				this.page++;
 				this.total = data.total;
-				this.initList.push(...data.data)
+				this.initList = mergeObjArrays(this.initList, data.data, 'symbol')
 			},
 			changeData(index) {
-				this.oderby = index;
+				this.orderby = index;
 				this.initList = [];
 				this.page = 1;
 				this.total = 0;
@@ -225,9 +225,10 @@
 				this.$refs.popup.open()
 			},
 			wsData(data) {
+				console.log(data);
 				// this.initList.unshift(...data)
 				let newArray = mergeObjArrays(this.initList, data, 'symbol')
-				if (this.oderby == 0) {
+				if (this.orderby == 0) {
 					newArray = insertionSort(newArray, "starttime");
 				} else {
 					newArray = insertionSort(newArray, "lirun", "大");

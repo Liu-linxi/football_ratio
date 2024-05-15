@@ -68,13 +68,13 @@ export function mergeArrays(oldArray, newArray) {
 
 export function mergeObjArrays(oldArray, newArray, key) {
 	var mergedArray = oldArray.slice(); // 复制旧数组以避免修改原数组
-
+	
 	// 遍历新数组
 	newArray.forEach(function(newItem) {
 		// 检查新数组中的每个元素是否在旧数组中存在
 		var found = false;
 		for (var i = 0; i < mergedArray.length; i++) {
-			if (mergedArray[i][propertyName] === newItem[propertyName]) {
+			if (mergedArray[i][key] === newItem[key]) {
 				// 如果找到匹配项，则替换旧数组中的对应元素
 				mergedArray[i] = newItem;
 				found = true;
@@ -86,7 +86,7 @@ export function mergeObjArrays(oldArray, newArray, key) {
 			mergedArray.push(newItem);
 		}
 	});
-
+console.log(mergedArray);
 	return mergedArray;
 
 	/* // 测试数据
